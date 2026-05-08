@@ -18,6 +18,20 @@
     --shadow-hover: 0 12px 35px rgba(0, 0, 0, 0.12);
 }
 
+/* === متغيرات الألوان - الثيم الداكن الفاخر === */
+body.dark-theme {
+    --bg-main: #0c111c;
+    --bg-section: #111827;
+    --bg-card: #161f33;
+    --text-dark: #f8fafc;
+    --text-body: #cbd5e1;
+    --text-muted: #94a3b8;
+    --brown: #f1f5f9;
+    --brown-light: #e2e8f0;
+    --border-light: rgba(201, 168, 76, 0.2);
+    /* إبقاء الذهبي والسماوي كما هما */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -1141,4 +1155,145 @@ footer .social-icons a:hover {
     .products-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+/* === تأثيرات الثيم الداكن الفاخر === */
+body.dark-theme .main-nav.scrolled {
+    background: rgba(12, 17, 28, 0.97);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* شفافية القائمة في الجوال */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 20px 0;
+    }
+
+    .navbar-nav {
+        background: transparent !important;
+        text-align: right;
+        align-items: flex-start;
+    }
+
+    .main-nav:not(.scrolled) .nav-link {
+        color: #fff !important;
+    }
+
+    body.dark-theme .navbar-collapse {
+        background: transparent !important;
+    }
+}
+
+body.dark-theme .main-nav.scrolled .nav-link {
+    color: var(--text-dark) !important;
+}
+
+body.dark-theme .main-nav.scrolled .nav-link:hover,
+body.dark-theme .main-nav.scrolled .nav-link.active {
+    color: var(--gold) !important;
+}
+
+/* زر تغيير الثيم */
+.theme-toggle-btn {
+    background: transparent;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.theme-toggle-btn:hover {
+    background: var(--gold);
+    color: #fff;
+    transform: rotate(20deg);
+}
+
+body.dark-theme .theme-toggle-btn {
+    border-color: var(--gold-light);
+    color: var(--gold-light);
+}
+
+body.dark-theme .theme-toggle-btn:hover {
+    background: var(--gold-light);
+    color: var(--bg-main);
+}
+
+/* تنسيقات الأقسام في الداكن */
+body.dark-theme .brands-strip {
+    background: linear-gradient(135deg, var(--bg-section), var(--bg-main));
+}
+
+body.dark-theme .brands-track img {
+    filter: brightness(2.5) grayscale(1);
+    opacity: 0.8;
+}
+
+body.dark-theme .brands-track .brand-item:hover img {
+    filter: brightness(1.5) grayscale(0);
+    opacity: 1;
+}
+
+body.dark-theme .footer-logo img,
+body.dark-theme .navbar-brand img,
+body.dark-theme .hero-logo {
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
+}
+
+body.dark-theme .footer-logo img[src*="logoblack"] {
+    filter: invert(1) brightness(2) contrast(1.2);
+}
+
+body.dark-theme .about-card::before {
+    background: radial-gradient(circle, rgba(201, 168, 76, 0.04) 0%, transparent 70%);
+}
+
+body.dark-theme .value-icon,
+body.dark-theme .branch-icon,
+body.dark-theme .review-avatar-icon {
+    background: linear-gradient(135deg, rgba(201, 168, 76, 0.15), rgba(71, 85, 105, 0.2));
+    border-color: rgba(201, 168, 76, 0.2);
+}
+
+body.dark-theme .review-card::before {
+    color: rgba(201, 168, 76, 0.05);
+}
+
+body.dark-theme .product-item {
+    background: var(--bg-card);
+}
+
+body.dark-theme .bg-white {
+    background-color: var(--bg-main) !important;
+}
+
+body.dark-theme .bg-cream {
+    background-color: var(--bg-section) !important;
+}
+
+body.dark-theme .whatsapp-cta-card {
+    background: var(--bg-card);
+}
+
+body.dark-theme .cta-divider .cta-icon {
+    background: var(--bg-card);
+}
+
+body.dark-theme .contact-form .form-control {
+    background: var(--bg-section);
+    color: var(--text-dark);
+}
+
+body.dark-theme .contact-form .form-control:focus {
+    background: var(--bg-main);
+    color: var(--text-dark);
 }
