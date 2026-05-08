@@ -109,3 +109,28 @@ function handleSubmit(e) {
     document.getElementById('successMsg').style.display = 'block';
     return false;
 }
+
+/* === تحويل الثيم الداكن والوضع الليلي === */
+document.addEventListener('DOMContentLoaded', function () {
+    var themeToggleBtn = document.getElementById('themeToggle');
+    var currentTheme = localStorage.getItem('theme');
+
+    if (currentTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+        if (themeToggleBtn) themeToggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+    }
+
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', function () {
+            document.body.classList.toggle('dark-theme');
+            var theme = 'light';
+            if (document.body.classList.contains('dark-theme')) {
+                theme = 'dark';
+                themeToggleBtn.innerHTML = '<i class="fas fa-sun"></i>';
+            } else {
+                themeToggleBtn.innerHTML = '<i class="fas fa-moon"></i>';
+            }
+            localStorage.setItem('theme', theme);
+        });
+    }
+});
