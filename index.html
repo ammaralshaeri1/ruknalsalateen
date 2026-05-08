@@ -4,9 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- === تحسين محركات البحث الأساسي (Basic SEO) === -->
     <title>ركن السلاطين للخياطة الرجالية</title>
     <meta name="description"
-        content="ركن السلاطين للخياطة الرجالية - أكثر من ثلاثة عقود في صناعة الأثواب الرجالية الفاخرة بأجود الأقمشة العالمية.">
+        content="مؤسسة ركن السلاطين للخياطة الرجالية بالرياض. خبرة أكثر من 30 عاماً في تفصيل الأثواب السعودية الفاخرة باستخدام أجود الأقمشة العالمية كالياباني والإيطالي والكوري. احجز ثوبك المثالي الآن.">
+    <meta name="keywords"
+        content="خياط رجالي, أفضل خياط في الرياض, تفصيل أثواب, ركن السلاطين, خياط رجالي بالرياض, ثوب سعودي, أثواب فخمة, تفصيل ثياب, أقمشة عالمية, خياط أثواب, أقمشة إيطالية, أقمشة يابانية, أقمشة كورية, طاقة كوري">
+    <meta name="author" content="مؤسسة ركن السلاطين للخياطة الرجالية">
+    <meta name="robots" content="index, follow">
+    <!-- أضف الدومين الرسمي الخاص بك لاحقاً هنا -->
+    <link rel="canonical" href="https://ruknalsalateen.com/">
+
+    <!-- === وسائل التواصل الاجتماعي (Open Graph / Facebook, LinkedIn, WhatsApp) === -->
+    <meta property="og:type" content="business.business">
+    <meta property="og:site_name" content="ركن السلاطين للخياطة الرجالية">
+    <meta property="og:title" content="ركن السلاطين للخياطة الرجالية | الفخامة في كل تفصيلة">
+    <meta property="og:description"
+        content="أفضل صُناع الأثواب الرجالية في السعودية. تفصيل احترافي، أقمشة عالمية، وأكثر من ثلاثة عقود من التميز. اختبر الفخامة الحقيقية.">
+    <meta property="og:url" content="https://ruknalsalateen.com/">
+    <meta property="og:image" content="https://ruknalsalateen.com/images/logoblack.png">
+
+    <!-- === تويتر (Twitter Cards) === -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ركن السلاطين | تفصيل أرقى الأثواب الرجالية بالرياض">
+    <meta name="twitter:description"
+        content="خياطتك المخصصة بالرياض. جودة لا تُضاهى باستخدام أفضل الأقمشة الطبيعية وتصاميم تواكب تطلعاتك.">
+    <meta name="twitter:image" content="https://ruknalsalateen.com/images/logoblack.png">
+
+    <!-- === البيانات المنظمة (JSON-LD LocalBusiness Schema) لتتصدر خرائط ونتائج جوجل === -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TailorShop",
+      "name": "مؤسسة ركن السلاطين للخياطة الرجالية",
+      "image": "https://ruknalsalateen.com/images/logoblack.png",
+      "@id": "https://ruknalsalateen.com/",
+      "url": "https://ruknalsalateen.com/",
+      "telephone": "+966502937376",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "الرياض",
+        "addressCountry": "SA",
+        "addressRegion": "الرياض"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 24.7136,
+        "longitude": 46.6753
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "09:00",
+        "closes": "23:00"
+      },
+      "priceRange": "$$$",
+      "description": "خياطة رجالية فاخرة بالرياض، نقدم أفضل الأقمشة اليابانية والإيطالية والكورية مع دقة تفصيل تتجاوز 30 عاماً من الخبرة."
+    }
+    </script>
+
     <!-- Bootstrap 5 RTL -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -59,7 +123,7 @@
     <section class="hero" id="top">
         <div class="gold-particles" id="particles"></div>
         <div class="hero-content" data-aos="fade-up">
-            <img src="images/logo.png" alt="ركن السلاطين" class="hero-logo">
+            <img src="images/logo.png" alt="شعار مؤسسة ركن السلاطين للخياطة الرجالية بالرياض" class="hero-logo">
             <h1>ركن السلاطين <span>للخياطة الرجالية</span></h1>
             <p class="tagline">نعتز <span>بثقتكم</span> ونتشرف بخدمتكم</p>
         </div>
@@ -67,35 +131,38 @@
 
     <!-- شريط الماركات المتحرك -->
     <div class="brands-strip">
+        <div class="brands-header">
+            <p class="brands-subtitle">شركاء النجاح</p>
+            <h2 class="brands-title">علامات تجارية نتشارك معها <span>الشغف</span> 🤩</h2>
+        </div>
         <div class="brands-track" id="brandsTrack">
-            <!-- الأصل -->
-            <div class="brand-item"><img src="images/brands/scabal.png" alt="Scabal"><span>Scabal</span></div>
-            <div class="brand-item"><img src="images/brands/holland_sherry.png" alt="Holland & Sherry"><span>Holland &
-                    Sherry</span></div>
-            <div class="brand-item"><img src="images/brands/dormeuil.png" alt="Dormeuil"><span>Dormeuil</span></div>
-            <div class="brand-item"><img src="images/brands/zegna.png" alt="Ermenegildo Zegna"><span>Ermenegildo
-                    Zegna</span></div>
-            <div class="brand-item"><img src="images/brands/loro_piana.png" alt="Loro Piana"><span>Loro Piana</span>
-            </div>
-            <div class="brand-item"><img src="images/brands/vitale_barberis.png" alt="Vitale Barberis"><span>Vitale
-                    Barberis</span></div>
-            <div class="brand-item"><img src="images/brands/reda.png" alt="Reda"><span>Reda</span></div>
-            <div class="brand-item"><img src="images/brands/thomas_mason.png" alt="Thomas Mason"><span>Thomas
-                    Mason</span></div>
-            <!-- النسخة (للحركة اللانهائية) -->
-            <div class="brand-item"><img src="images/brands/scabal.png" alt="Scabal"><span>Scabal</span></div>
-            <div class="brand-item"><img src="images/brands/holland_sherry.png" alt="Holland & Sherry"><span>Holland &
-                    Sherry</span></div>
-            <div class="brand-item"><img src="images/brands/dormeuil.png" alt="Dormeuil"><span>Dormeuil</span></div>
-            <div class="brand-item"><img src="images/brands/zegna.png" alt="Ermenegildo Zegna"><span>Ermenegildo
-                    Zegna</span></div>
-            <div class="brand-item"><img src="images/brands/loro_piana.png" alt="Loro Piana"><span>Loro Piana</span>
-            </div>
-            <div class="brand-item"><img src="images/brands/vitale_barberis.png" alt="Vitale Barberis"><span>Vitale
-                    Barberis</span></div>
-            <div class="brand-item"><img src="images/brands/reda.png" alt="Reda"><span>Reda</span></div>
-            <div class="brand-item"><img src="images/brands/thomas_mason.png" alt="Thomas Mason"><span>Thomas
-                    Mason</span></div>
+            <!-- Original Set -->
+            <div class="brand-item"><img src="images/brands/acetex.png" alt="Acetex"><span>Acetex</span></div>
+            <div class="brand-item"><img src="images/brands/aurafeel.png" alt="Aurafeel"><span>Aurafeel</span></div>
+            <div class="brand-item"><img src="images/brands/dante.png" alt="Dante"><span>Dante</span></div>
+            <div class="brand-item"><img src="images/brands/gently.png" alt="Gently"><span>Gently</span></div>
+            <div class="brand-item"><img src="images/brands/richy.png" alt="Richy"><span>Richy</span></div>
+
+            <!-- Set 2 -->
+            <div class="brand-item"><img src="images/brands/acetex.png" alt="Acetex"><span>Acetex</span></div>
+            <div class="brand-item"><img src="images/brands/aurafeel.png" alt="Aurafeel"><span>Aurafeel</span></div>
+            <div class="brand-item"><img src="images/brands/dante.png" alt="Dante"><span>Dante</span></div>
+            <div class="brand-item"><img src="images/brands/gently.png" alt="Gently"><span>Gently</span></div>
+            <div class="brand-item"><img src="images/brands/richy.png" alt="Richy"><span>Richy</span></div>
+
+            <!-- Set 3 -->
+            <div class="brand-item"><img src="images/brands/acetex.png" alt="Acetex"><span>Acetex</span></div>
+            <div class="brand-item"><img src="images/brands/aurafeel.png" alt="Aurafeel"><span>Aurafeel</span></div>
+            <div class="brand-item"><img src="images/brands/dante.png" alt="Dante"><span>Dante</span></div>
+            <div class="brand-item"><img src="images/brands/gently.png" alt="Gently"><span>Gently</span></div>
+            <div class="brand-item"><img src="images/brands/richy.png" alt="Richy"><span>Richy</span></div>
+
+            <!-- Set 4 -->
+            <div class="brand-item"><img src="images/brands/acetex.png" alt="Acetex"><span>Acetex</span></div>
+            <div class="brand-item"><img src="images/brands/aurafeel.png" alt="Aurafeel"><span>Aurafeel</span></div>
+            <div class="brand-item"><img src="images/brands/dante.png" alt="Dante"><span>Dante</span></div>
+            <div class="brand-item"><img src="images/brands/gently.png" alt="Gently"><span>Gently</span></div>
+            <div class="brand-item"><img src="images/brands/richy.png" alt="Richy"><span>Richy</span></div>
         </div>
     </div>
 
