@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المعرض | ركن السلاطين</title>
+    <meta name="description"
+        content="معرض أعمال ركن السلاطين للخياطة الرجالية - أثواب وأكوات وصدريات وأقمشة فاخرة في الرياض">
+    <!-- Bootstrap 5 RTL -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Tajawal:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Gallery Shared CSS -->
+    <link href="gallery.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="gallery-nav">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="index.html" class="brand">
+                <img src="images/logoblack.png" alt="ركن السلاطين" id="navLogo">
+            </a>
+            <div class="d-flex align-items-center gap-3">
+                <button class="theme-toggle-btn" id="themeToggle" aria-label="تغيير المظهر">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="gallery.html" class="back-btn">
+                    <i class="fas fa-arrow-right"></i> العودة للمعرض
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero (filled by JS) -->
+    <div class="cat-hero">
+        <div class="cat-hero-content" data-aos="fade-up">
+            <div class="cat-badge" id="catBadge">
+                <i id="catBadgeIcon"></i>
+                <span id="catBadgeText"></span>
+            </div>
+            <h1 id="catTitle">تحميل...</h1>
+            <div class="hero-divider"></div>
+            <p id="catDesc">...</p>
+        </div>
+    </div>
+
+    <!-- Info Bar -->
+    <div class="info-bar">
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-4 col-md stat">
+                    <span class="stat-num" id="statCount">—</span>
+                    <span class="stat-label">عمل رائع</span>
+                </div>
+                <div class="col-4 col-md stat">
+                    <span class="stat-num">+٣٠</span>
+                    <span class="stat-label">سنة خبرة</span>
+                </div>
+                <div class="col-4 col-md stat">
+                    <span class="stat-num">١٠٠٪</span>
+                    <span class="stat-label">حياكة يدوية</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="mb-5" data-aos="fade-up">
+                <h2 class="section-title left-align" id="gridTitle">المعرض</h2>
+            </div>
+            <div class="row g-4" id="galleryGrid">
+                <!-- filled by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
+        <button class="lightbox-close" onclick="closeLightbox(event)">
+            <i class="fas fa-times"></i>
+        </button>
+        <img src="" alt="" id="lightboxImg">
+    </div>
+
+    <!-- التذييل -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4 text-center text-md-start">
+                    <div class="footer-logo"><img src="images/logoblack.png" alt="ركن السلاطين"></div>
+                    <p>مؤسسة ركن السلاطين للخياطة الرجالية - أكثر من ثلاثة عقود من التميز في صناعة الأثواب الفاخرة.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>روابط سريعة</h5>
+                    <ul>
+                        <li><a href="index.html#top">الرئيسية</a></li>
+                        <li><a href="index.html#about">من نحن</a></li>
+                        <li><a href="index.html#products">منتجاتنا</a></li>
+                        <li><a href="index.html#branch">فرعنا</a></li>
+                        <li><a href="index.html#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-center text-md-start">
+                    <h5>تابعنا</h5>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/alsalatin_1?igsh=cHo1dGV3Nm4xb3J3&utm_source=qr"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" aria-label="Snapchat"><i class="fab fa-snapchat-ghost"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/966501292147" aria-label="WhatsApp" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">جميع الحقوق محفوظة &copy; ركن السلاطين 2026</div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 700, once: true });
+
+        /* ── Dark Mode ── */
+        const toggle = document.getElementById('themeToggle');
+        const navLogo = document.getElementById('navLogo');
+
+        function applyTheme(dark) {
+            document.body.classList.toggle('dark-theme', dark);
+            toggle.querySelector('i').className = dark ? 'fas fa-sun' : 'fas fa-moon';
+            const lightLogo = 'images/logoblack.png';
+            const darkLogo = 'images/logo.png';
+            navLogo.src = dark ? darkLogo : lightLogo;
+            const fl = document.querySelector('.footer-logo img');
+            if (fl) fl.src = dark ? darkLogo : lightLogo;
+        }
+
+        applyTheme(localStorage.getItem('theme') === 'dark');
+        toggle.addEventListener('click', () => {
+            const isDark = document.body.classList.toggle('dark-theme');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            applyTheme(isDark);
+        });
+
+        /* ── Category Data ── */
+        const categories = {
+            products: {
+                name: 'الأثواب الرجالية',
+                icon: 'fas fa-user-tie',
+                badgeText: 'تصاميم رجالية راقية',
+                desc: 'أثواب سعودية مفصّلة بعناية فائقة من أمهر الخياطين في المملكة، تجمع بين الأصالة العريقة والحداثة في كل خيط وحرفة.',
+                gridTitle: 'أثوابنا المفصّلة',
+                tag: 'الأثواب',
+                items: [
+                    { img: 'images/products/product1.png', title: 'الثوب الكلاسيكي', desc: 'ثوب سعودي كلاسيكي بجودة ممتازة مستوحى من الأصالة السعودية بلمسة عصرية أنيقة.' },
+                    { img: 'images/products/product2.png', title: 'ثوب الفخامة', desc: 'تصميم ملكي فاخر من أرقى الأقمشة العالمية لمن يرفض إلا الأفضل في كل تفاصيله.' },
+                    { img: 'images/products/product3.png', title: 'الثوب الملكي', desc: 'خياطة احترافية بأدق التفاصيل تحاكي الأزياء التقليدية بمهارة حرفية لا مثيل لها.' },
+                    { img: 'images/products/product4.jpg', title: 'ثوب الأناقة الرفيعة', desc: 'تنسيق احترافي يجمع بين جودة الخامة وجمال التفصيل ليمنحك ثقة لا تُضاهى في أي مناسبة.' },
+                    { img: 'images/products/product5.jpg', title: 'ثوب العيد الفاخر', desc: 'تصميم خاص لمناسباتك المميزة يمزج الفخامة التقليدية بالرونق المعاصر.' },
+                    { img: 'images/products/product6.png', title: 'الثوب الأسود الفاخر', desc: 'رمز التميز الرجالي؛ ثوب داكن أنيق بتفاصيل ذهبية ناعمة تبرز شخصيتك بامتياز.' },
+                    { img: 'images/products/product7.jpg', title: 'الثوب العصري', desc: 'خياطة منضبطة تعكس روح الرجل المعاصر بتصميم يجسّد الذوق الرفيع والحضور الجريء.' },
+                    { img: 'images/products/product8.jpeg', title: 'ثوب الاحتفالات', desc: 'تصميم يليق بأبهى المناسبات والحفلات حيث يتحول الثوب إلى لوحة فنية على قامتك.' },
+                ]
+            },
+            fabrics: {
+                name: 'أقمشتنا الحصرية',
+                icon: 'fas fa-layer-group',
+                badgeText: 'أقمشة حصرية خاصة بنا',
+                desc: 'أقمشة ذات جودة استثنائية مستوردة حصرياً لنا من أرقى المصانع اليابانية والإيطالية والكورية — لأننا نحرص على أن يبدأ الفخر من الخيط الأول.',
+                gridTitle: 'مجموعتنا الحصرية من الأقمشة',
+                tag: 'أقمشة حصرية',
+                isExclusive: true,
+                items: [
+                    { img: 'images/fabrics/fabric.jpeg', title: 'قماش الحرير الياباني', desc: 'من أجود أقمشتنا الحصرية، ياباني فاخر بملمس حريري ناعم يمنح الثوب سقوطاً ملكياً لا مثيل له.' },
+                    { img: 'images/fabrics/fabric1.JPG', title: 'القماش الإيطالي الفاخر', desc: 'قماش إيطالي أصيل من أقمشتنا المستوردة حصرياً يتميز بألوانه العميقة ومتانته الاستثنائية.' },
+                    { img: 'images/fabrics/fabric2.JPG', title: 'الصوف الإنجليزي المنقّح', desc: 'قماش صوفي دافئ وأنيق مستورد بصورة حصرية لنا مثالي للأكوات والأثواب الرسمية الشتوية.' },
+                    { img: 'images/fabrics/fabric3.jpg', title: 'القماش الكوري البارد', desc: 'من أقمشتنا الكورية الحصرية يتميز بمقاومة الحرارة ومنح إحساس مرتاح في الطقس الساخن.' },
+                    { img: 'images/fabrics/fabric4.jpg', title: 'اللينين الطبيعي النقي', desc: 'قماش لينين طبيعي من أفضل مصادرنا الحصرية خفيف وناعم ومريح طوال اليوم للأثواب الصيفية.' },
+                    { img: 'images/fabrics/fabric5.jpg', title: 'الأطلس الذهبي', desc: 'لمسة ذهبية ساحرة من أقمشتنا الحصرية يلائم المناسبات الفاخرة والأثواب الاحتفالية.' },
+                    { img: 'images/fabrics/fabric6.JPG', title: 'الكتان القديم الأصيل', desc: 'قماش كتان خالص من مصادر حصرية يجمع بين الأناقة العتيقة والراحة الحديثة في آن معاً.' },
+                    { img: 'images/fabrics/fabric7.jpg', title: 'بولي الصيفي المنسدل', desc: 'قماش بولي عالي الجودة من مجموعاتنا الحصرية خفيف كالريشة مناسب لأثواب الصيف والسهرات.' },
+                    { img: 'images/fabrics/fabric8.jpeg', title: 'التويد الاسكتلندي', desc: 'قماش رفيع المنسج من اختيارنا الحصري يمنح الثوب مظهراً أوروبياً راقياً وشخصية مستقلة.' },
+                    { img: 'images/fabrics/fabric9.jpeg', title: 'مزيج الكشمير', desc: 'أغلى وأفخم أقمشتنا المستوردة حصرياً، ناعم كالحرير ودافئ للأكوات الملكية.' },
+                    { img: 'images/fabrics/fabric10.jpeg', title: 'القطن المصري الطويل التيلة', desc: 'قطن مصري أصيل من أقمشتنا الحصرية بملمس فاخر وخفة ملحوظة ومتانة تدوم سنوات.' },
+                    { img: 'images/fabrics/fabric11.jpeg', title: 'قماش البمبو الصحي', desc: 'من مجموعاتنا الحصرية الحديثة مصنوع من ألياف البمبو الطبيعية مضاداً للبكتيريا ومريحاً.' },
+                    { img: 'images/fabrics/fabric12.jpeg', title: 'الجاكار الفاخر', desc: 'قماش منقوش بتصاميم منسوجة بدقة متناهية جزء من أقمشتنا الحصرية المميزة.' },
+                    { img: 'images/fabrics/fabric13.jpg', title: 'الميكرو فايبر الفضي', desc: 'أحدث مجموعاتنا الحصرية يعكس الضوء بشكل راقٍ ويضفي بريقاً خفياً مميزاً على الثوب.' },
+                ]
+            },
+            coats: {
+                name: 'الأكوات الرجالية',
+                icon: 'fas fa-vest',
+                badgeText: 'أكوات راقية مفصّلة',
+                desc: 'أكوات رجالية تجمع بين الكلاسيكية الأوروبية الراقية والروح الشرقية الأصيلة، مصنوعة بيد الحِرفيين لتكون تجسيداً حقيقياً للهيبة والتميز.',
+                gridTitle: 'أكواتنا الفاخرة',
+                tag: 'الأكوات',
+                items: [
+                    { img: 'images/coats/coat1.jpg', title: 'كوت الخريف الملكي', desc: 'كوت شتوي فاخر بتصميم كلاسيكي بفتحة صدر واسعة ودرزات دقيقة تعكس شخصية ذو الذوق الرفيع.' },
+                    { img: 'images/coats/coat2.PNG', title: 'الكوت الرسمي الداكن', desc: 'قطعة لا غنى عنها في خزانة الرجل الناجح، كوت رسمي أنيق يمزج بين العصرية والكلاسيكية.' },
+                    { img: 'images/coats/coat3.jpg', title: 'كوت الغاردين الفاخر', desc: 'كوت من قماش الغاردين الفاخر بحياكة لندنية يمنحك حضوراً لائقاً في أقسى المناسبات الرسمية.' },
+                ]
+            },
+            vests: {
+                name: 'الصدريات الرجالية',
+                icon: 'fas fa-tshirt',
+                badgeText: 'صدريات رجالية أنيقة',
+                desc: 'صدريات رجالية أنيقة تُضفي على مظهرك لمسة كلاسيكية استثنائية مصممة لتتناغم مع مختلف أنواع الأثواب والأكوات.',
+                gridTitle: 'صدرياتنا الكلاسيكية',
+                tag: 'الصدريات',
+                items: [
+                    { img: 'images/vests/vest.webp', title: 'صدرية السواريه', desc: 'صدرية أنيقة للمناسبات الاحتفالية من أفضل الأقمشة بحياكة دقيقة تبرز قامتك بثقة.' },
+                    { img: 'images/vests/vest1.webp', title: 'الصدرية الكلاسيكية', desc: 'تصميم كلاسيكي خالد يتناسب مع كل مناسبة يمنحك مظهراً متكاملاً من الذوق الرفيع.' },
+                    { img: 'images/vests/vest2.webp', title: 'صدرية الأعمال', desc: 'خيارك المثالي للاجتماعات والمناسبات الرسمية، صدرية تجمع الأناقة والمهنية في قطعة واحدة.' },
+                    { img: 'images/vests/vest3.webp', title: 'الصدرية الذهبية', desc: 'صدرية بلمسات ذهبية تعكس البريق والتميز، صممت خصيصاً للمناسبات الفاخرة والحفلات.' },
+                    { img: 'images/vests/vest4.webp', title: 'صدرية المساء', desc: 'رفيقتك المثالية لسهرات المساء بتصميم أنيق يضيف إلى الثوب طبقة من الفخامة.' },
+                    { img: 'images/vests/vest5.webp', title: 'الصدرية القطيفية', desc: 'من قماش القطيفة بملمس ناعم استثنائي تضفي على مظهرك هالة من الثراء الحقيقي.' },
+                    { img: 'images/vests/vest6.webp', title: 'صدرية الطقم الكامل', desc: 'مصممة لتكمل طقماً متكاملاً من الكوت والثوب تجعلك اللافت الأول في التجمعات الرسمية.' },
+                    { img: 'images/vests/vest7.webp', title: 'الصدرية الصيفية الخفيفة', desc: 'صدرية خفيفة بقماش منسدل مريح للطقس الحار، تجمع الشياكة والعملية في خيار واحد ذكي.' },
+                    { img: 'images/vests/vest8.webp', title: 'صدرية الاعتزاز', desc: 'قطعة فريدة من نسيج فاخر بتطريز دقيق تحمل هوية ركن السلاطين وتعكس مستوى لا يُنافَس.' },
+                ]
+            },
+            machine: {
+                name: 'معداتنا الاحترافية',
+                icon: 'fas fa-cogs',
+                badgeText: 'أجهزة ومعدات متطورة',
+                desc: 'نستثمر في أحدث المعدات الاحترافية لنضمن أن كل ثوب يخرج من مشغلنا بمستوى تشطيب يفوق التوقعات ويعكس الاهتمام بأدق التفاصيل.',
+                gridTitle: 'معداتنا وأجهزتنا',
+                tag: 'معدات احترافية',
+                items: [
+                    {
+                        img: 'images/machine/machine.jpg',
+                        title: 'المكبس الهيدروليكي',
+                        desc: 'جهاز مكبس هيدروليكي متطور نستخدمه لكبس ياقات الأثواب وتشطيب التفاصيل الدقيقة بدقة لا تُضاهى. يمنح الثوب مظهراً نهائياً منضبطاً وأنيقاً يتفوق على الحياكة اليدوية المحضة ويعكس مستوى الاحتراف والتميز الذي نسعى إليه في كل قطعة.'
+                    },
+                ]
+            }
+        };
+
+        /* ── Build Page ── */
+        const params = new URLSearchParams(window.location.search);
+        const cat = params.get('cat') || 'products';
+        const data = categories[cat] || categories.products;
+
+        document.title = data.name + ' | ركن السلاطين';
+        document.getElementById('catBadgeIcon').className = data.icon;
+        document.getElementById('catBadgeText').textContent = data.badgeText;
+        document.getElementById('catTitle').innerHTML = 'معرض <span>' + data.name + '</span>';
+        document.getElementById('catDesc').textContent = data.desc;
+        document.getElementById('gridTitle').textContent = data.gridTitle;
+        document.getElementById('statCount').textContent = data.items.length;
+
+        const grid = document.getElementById('galleryGrid');
+
+        data.items.forEach((item, i) => {
+            const exclusiveBadge = data.isExclusive
+                ? `<div class="exclusive-badge"><i class="fas fa-crown"></i> حصري لركن السلاطين</div>`
+                : '';
+
+            // Machine category gets a wide single card
+            const colClass = data.items.length === 1
+                ? 'col-12 col-md-8 offset-md-2'
+                : 'col-sm-6 col-lg-4';
+
+            grid.innerHTML += `
+                <div class="${colClass}" data-aos="fade-up" data-aos-delay="${(i % 3) * 80}">
+                    <div class="portfolio-item">
+                        <div class="portfolio-img-wrap">
+                            <img src="${item.img}" alt="${item.title}" loading="lazy"
+                                 onclick="openLightbox('${item.img}', '${item.title}')">
+                            <div class="portfolio-img-overlay">
+                                <div class="view-icon" onclick="openLightbox('${item.img}', '${item.title}')">
+                                    <i class="fas fa-expand"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-body">
+                            ${exclusiveBadge}
+                            <span class="portfolio-cat-tag">${data.tag}</span>
+                            <h4 class="portfolio-title">${item.title}</h4>
+                            <p class="portfolio-desc">${item.desc}</p>
+                        </div>
+                    </div>
+                </div>`;
+        });
+
+        /* ── Lightbox ── */
+        function openLightbox(src, alt) {
+            const lb = document.getElementById('lightbox');
+            document.getElementById('lightboxImg').src = src;
+            document.getElementById('lightboxImg').alt = alt;
+            lb.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(e) {
+            const lb = document.getElementById('lightbox');
+            if (e.target === lb || e.currentTarget.classList.contains('lightbox-close')) {
+                lb.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') {
+                document.getElementById('lightbox').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</body>
+
+</html>

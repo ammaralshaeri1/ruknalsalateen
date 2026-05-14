@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# مسارات يتم بناءها لاحقاً لمنع الأرشفة إذا لزم الأمر
+Disallow: /admin/
+Disallow: /private/
+
+Sitemap: https://ruknalsalateen.com/sitemap.xml

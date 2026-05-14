@@ -611,6 +611,31 @@ section {
     background: linear-gradient(to top, rgba(44, 30, 15, 0.95) 0%, rgba(44, 30, 15, 0.6) 60%, transparent 100%);
 }
 
+/* === زر تصفح المعرض === */
+.gallery-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 16px 38px;
+    border-radius: 50px;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    border: none;
+    box-shadow: 0 6px 24px rgba(201, 168, 76, 0.3);
+    letter-spacing: 0.5px;
+}
+
+.gallery-cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 8px 28px rgba(201, 168, 76, 0.45),
+        0 0 0 4px rgba(201, 168, 76, 0.15);
+    color: #fff;
+}
+
 /* Lightbox */
 .lightbox {
     position: fixed;
